@@ -1,0 +1,3 @@
+# CSL references with stable IDs; cite using Pandoc [@id] syntax.
+# Record identities and supporting passages in sources.md and claims.yaml.
+references: []

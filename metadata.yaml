@@ -1,0 +1,13 @@
+slug: the-machine-gaze
+web_slug: the-machine-gaze
+title: "the-machine-gaze"
+header: "the-machine-gaze"
+created: "2026-09"        # inception month (drives YYYY/MM archive path)
+date: null                    # publication month, e.g. "May 2026" (shown on web)
+paper_dir: paper
+has_simulation: false
+claims_target: none           # results.json | claim-ledger | none
+repo: git@github.com:piatra-institute/papers-the-machine-gaze.git
+github: https://github.com/piatra-institute/papers-the-machine-gaze
+status: draft                 # draft | built | published
+abstract: null
