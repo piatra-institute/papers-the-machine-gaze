@@ -1,0 +1,10 @@
+[project]
+name = "the-machine-gaze-sim"
+version = "0.1.0"
+description = "Machinehood as closure under an observation: self-sorting arrays, control spillover, slack and the performative loop"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+]

@@ -1,5 +1,1049 @@
 schema: 1
-coverage: pending
-reviewed_manuscript_sha256: null
-claims: []
-runs: []
+coverage: reviewed
+reviewed_manuscript_sha256: bce55790987b503b4abb1072bf28ca5c0606ee8b3f772092a4e9d4a964bb8d88
+claims:
+- id: abs-peak-lo
+  kind: computation
+  passage: Self-sorting arrays with cell-level algorithms, reproduced after Zhang, Goldstein and Levin,
+    all compute the same function, yet arrays that mix two algorithms cluster by algorithm while they
+    sort, reaching aggregation of 0.59 to 0.65 where label-matched controls stay at 0.49, and at the same
+    observed sortedness the remaining work differs 11-fold between algorithms.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/0/peak_of_mean
+    reported: '0.59'
+    units: aggregation
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, bubble+selection, peak of mean curve
+    decimals: 2
+- id: abs-peak-hi
+  kind: computation
+  passage: Self-sorting arrays with cell-level algorithms, reproduced after Zhang, Goldstein and Levin,
+    all compute the same function, yet arrays that mix two algorithms cluster by algorithm while they
+    sort, reaching aggregation of 0.59 to 0.65 where label-matched controls stay at 0.49, and at the same
+    observed sortedness the remaining work differs 11-fold between algorithms.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/2/peak_of_mean
+    reported: '0.65'
+    units: aggregation
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, insertion+selection, peak of mean curve
+    decimals: 2
+- id: abs-control
+  kind: computation
+  passage: Self-sorting arrays with cell-level algorithms, reproduced after Zhang, Goldstein and Levin,
+    all compute the same function, yet arrays that mix two algorithms cluster by algorithm while they
+    sort, reaching aggregation of 0.59 to 0.65 where label-matched controls stay at 0.49, and at the same
+    observed sortedness the remaining work differs 11-fold between algorithms.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/0/control_mean_at_peak_position
+    reported: '0.49'
+    units: aggregation
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, control at the chimeric peak position
+    decimals: 2
+- id: abs-ratio
+  kind: computation
+  passage: Self-sorting arrays with cell-level algorithms, reproduced after Zhang, Goldstein and Levin,
+    all compute the same function, yet arrays that mix two algorithms cluster by algorithm while they
+    sort, reaching aggregation of 0.59 to 0.65 where label-matched controls stay at 0.49, and at the same
+    observed sortedness the remaining work differs 11-fold between algorithms.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/closure/ratio_max_min_mean
+    reported: '11'
+    units: ratio of mean remaining swaps
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, at sortedness 0.9
+    decimals: 0
+- id: abs-zeta
+  kind: computation
+  passage: A controller designed on two modes of a beam is stable on its own model and destabilizes the
+    beam unless the unmodelled modes have a damping ratio above 0.0093.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /spillover/critical_zeta_residual
+    reported: '0.0093'
+    units: damping ratio
+    conditions: pinned beam, modes (k pi)^2, k=1..5; LQR plus observer designed on modes 1-2; actuator
+      0.21, sensor 0.83, bisection on the residual damping ratio
+    decimals: 4
+- id: abs-40
+  kind: computation
+  passage: In an organisation whose throughput is observed and whose repertoire for absorbing disturbances
+    is not, ascent on observed throughput removes all maintenance and cuts long-run output to 40% of the
+    optimum, at the policy under which the system closes exactly under its observation.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/gaze/late_over_star
+    reported: 40%
+    units: percent of optimal long-run output
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800; finite-difference
+      ascent, windows of 10, probe 0.02, step 0.01, pairs with a stoppage set aside, run of 2e6, second
+      half of the run
+    decimals: 0
+    scale: 100
+- id: swap-bs
+  kind: computation
+  passage: 'The mean number of swaps reproduces the published values closely: 1716 for bubble with selection,
+    against 1740.9 reported, 2466 for bubble with insertion, against 2476.02, and 1557 for insertion with
+    selection, against 1534.77 [@zhang2024].'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/0/mean_swaps
+    reported: '1716'
+    units: swaps
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, bubble+selection
+    decimals: 0
+- id: swap-bs-pub
+  kind: computation
+  passage: 'The mean number of swaps reproduces the published values closely: 1716 for bubble with selection,
+    against 1740.9 reported, 2466 for bubble with insertion, against 2476.02, and 1557 for insertion with
+    selection, against 1534.77 [@zhang2024].'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/published/mean_swaps_bubble_selection
+    reported: '1740.9'
+    units: swaps (published)
+    conditions: Zhang et al. arXiv:2401.05375, Results
+    decimals: 1
+- id: swap-bi
+  kind: computation
+  passage: 'The mean number of swaps reproduces the published values closely: 1716 for bubble with selection,
+    against 1740.9 reported, 2466 for bubble with insertion, against 2476.02, and 1557 for insertion with
+    selection, against 1534.77 [@zhang2024].'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/1/mean_swaps
+    reported: '2466'
+    units: swaps
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, bubble+insertion
+    decimals: 0
+- id: swap-bi-pub
+  kind: computation
+  passage: 'The mean number of swaps reproduces the published values closely: 1716 for bubble with selection,
+    against 1740.9 reported, 2466 for bubble with insertion, against 2476.02, and 1557 for insertion with
+    selection, against 1534.77 [@zhang2024].'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/published/mean_swaps_bubble_insertion
+    reported: '2476.02'
+    units: swaps (published)
+    conditions: Zhang et al. arXiv:2401.05375, Results
+    decimals: 2
+- id: swap-is
+  kind: computation
+  passage: 'The mean number of swaps reproduces the published values closely: 1716 for bubble with selection,
+    against 1740.9 reported, 2466 for bubble with insertion, against 2476.02, and 1557 for insertion with
+    selection, against 1534.77 [@zhang2024].'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/2/mean_swaps
+    reported: '1557'
+    units: swaps
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, insertion+selection
+    decimals: 0
+- id: swap-is-pub
+  kind: computation
+  passage: 'The mean number of swaps reproduces the published values closely: 1716 for bubble with selection,
+    against 1740.9 reported, 2466 for bubble with insertion, against 2476.02, and 1557 for insertion with
+    selection, against 1534.77 [@zhang2024].'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/published/mean_swaps_insertion_selection
+    reported: '1534.77'
+    units: swaps (published)
+    conditions: Zhang et al. arXiv:2401.05375, Results
+    decimals: 2
+- id: agg-start
+  kind: computation
+  passage: In mixed arrays aggregation starts at 0.50, rises early in the run to a peak of the mean curve
+    of 0.59 for bubble with selection, 0.61 for bubble with insertion and 0.65 for insertion with selection,
+    and falls back near its starting value at the end, when sorting by value has scattered the labels
+    again.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/0/start
+    reported: '0.50'
+    units: aggregation
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, bubble+selection, start
+    decimals: 2
+- id: agg-bs
+  kind: computation
+  passage: In mixed arrays aggregation starts at 0.50, rises early in the run to a peak of the mean curve
+    of 0.59 for bubble with selection, 0.61 for bubble with insertion and 0.65 for insertion with selection,
+    and falls back near its starting value at the end, when sorting by value has scattered the labels
+    again.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/0/peak_of_mean
+    reported: '0.59'
+    units: aggregation
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, bubble+selection
+    decimals: 2
+- id: agg-bi
+  kind: computation
+  passage: In mixed arrays aggregation starts at 0.50, rises early in the run to a peak of the mean curve
+    of 0.59 for bubble with selection, 0.61 for bubble with insertion and 0.65 for insertion with selection,
+    and falls back near its starting value at the end, when sorting by value has scattered the labels
+    again.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/1/peak_of_mean
+    reported: '0.61'
+    units: aggregation
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, bubble+insertion
+    decimals: 2
+- id: agg-is
+  kind: computation
+  passage: In mixed arrays aggregation starts at 0.50, rises early in the run to a peak of the mean curve
+    of 0.59 for bubble with selection, 0.61 for bubble with insertion and 0.65 for insertion with selection,
+    and falls back near its starting value at the end, when sorting by value has scattered the labels
+    again.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/2/peak_of_mean
+    reported: '0.65'
+    units: aggregation
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, insertion+selection
+    decimals: 2
+- id: agg-ctrl
+  kind: computation
+  passage: In controls the mean at the same points is 0.49 (Figure 1a), and the difference is large in
+    every pair (Welch $t$ from 13.8 to 23.0).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/1/control_mean_at_peak_position
+    reported: '0.49'
+    units: aggregation
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, controls at the chimeric peak positions
+    decimals: 2
+- id: agg-t-lo
+  kind: computation
+  passage: In controls the mean at the same points is 0.49 (Figure 1a), and the difference is large in
+    every pair (Welch $t$ from 13.8 to 23.0).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/0/welch_t
+    reported: '13.8'
+    units: t statistic
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, chimeric vs control at the chimeric peak position
+    decimals: 1
+- id: agg-t-hi
+  kind: computation
+  passage: In controls the mean at the same points is 0.49 (Figure 1a), and the difference is large in
+    every pair (Welch $t$ from 13.8 to 23.0).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/2/welch_t
+    reported: '23.0'
+    units: t statistic
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, chimeric vs control at the chimeric peak position
+    decimals: 1
+- id: run-bs
+  kind: computation
+  passage: Mean per-run peaks are 0.674, 0.666 and 0.698, against 0.72, 0.65 and 0.69 reported in the
+    original study [@zhang2024, Results].
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/0/mean_run_peak
+    reported: '0.674'
+    units: aggregation
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, bubble+selection
+    decimals: 3
+- id: run-bi
+  kind: computation
+  passage: Mean per-run peaks are 0.674, 0.666 and 0.698, against 0.72, 0.65 and 0.69 reported in the
+    original study [@zhang2024, Results].
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/1/mean_run_peak
+    reported: '0.666'
+    units: aggregation
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, bubble+insertion
+    decimals: 3
+- id: run-is
+  kind: computation
+  passage: Mean per-run peaks are 0.674, 0.666 and 0.698, against 0.72, 0.65 and 0.69 reported in the
+    original study [@zhang2024, Results].
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/mixes/2/mean_run_peak
+    reported: '0.698'
+    units: aggregation
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, insertion+selection
+    decimals: 3
+- id: run-pub-bs
+  kind: computation
+  passage: Mean per-run peaks are 0.674, 0.666 and 0.698, against 0.72, 0.65 and 0.69 reported in the
+    original study [@zhang2024, Results].
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/published/peak_bubble_selection
+    reported: '0.72'
+    units: aggregation (published)
+    conditions: Zhang et al. arXiv:2401.05375, Results
+    decimals: 2
+- id: run-pub-bi
+  kind: computation
+  passage: Mean per-run peaks are 0.674, 0.666 and 0.698, against 0.72, 0.65 and 0.69 reported in the
+    original study [@zhang2024, Results].
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/published/peak_bubble_insertion
+    reported: '0.65'
+    units: aggregation (published)
+    conditions: Zhang et al. arXiv:2401.05375, Results
+    decimals: 2
+- id: run-pub-is
+  kind: computation
+  passage: Mean per-run peaks are 0.674, 0.666 and 0.698, against 0.72, 0.65 and 0.69 reported in the
+    original study [@zhang2024, Results].
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/published/peak_insertion_selection
+    reported: '0.69'
+    units: aggregation (published)
+    conditions: Zhang et al. arXiv:2401.05375, Results
+    decimals: 2
+- id: clo-b
+  kind: computation
+  passage: At that common observed state the remaining work averaged 72.5 swaps for bubble, 795.7 for
+    insertion, 117.0 for selection and 82.6 for the bubble-selection mixture, a ratio of 11.0 between
+    the largest and smallest means (Figure 1b–c).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/closure/rows/0/mean_remaining_swaps
+    reported: '72.5'
+    units: swaps
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, pure bubble, from sortedness 0.9
+    decimals: 1
+- id: clo-i
+  kind: computation
+  passage: At that common observed state the remaining work averaged 72.5 swaps for bubble, 795.7 for
+    insertion, 117.0 for selection and 82.6 for the bubble-selection mixture, a ratio of 11.0 between
+    the largest and smallest means (Figure 1b–c).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/closure/rows/1/mean_remaining_swaps
+    reported: '795.7'
+    units: swaps
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, pure insertion, from sortedness 0.9
+    decimals: 1
+- id: clo-s
+  kind: computation
+  passage: At that common observed state the remaining work averaged 72.5 swaps for bubble, 795.7 for
+    insertion, 117.0 for selection and 82.6 for the bubble-selection mixture, a ratio of 11.0 between
+    the largest and smallest means (Figure 1b–c).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/closure/rows/2/mean_remaining_swaps
+    reported: '117.0'
+    units: swaps
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, pure selection, from sortedness 0.9
+    decimals: 1
+- id: clo-m
+  kind: computation
+  passage: At that common observed state the remaining work averaged 72.5 swaps for bubble, 795.7 for
+    insertion, 117.0 for selection and 82.6 for the bubble-selection mixture, a ratio of 11.0 between
+    the largest and smallest means (Figure 1b–c).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/closure/rows/3/mean_remaining_swaps
+    reported: '82.6'
+    units: swaps
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition, bubble+selection, from sortedness 0.9
+    decimals: 1
+- id: clo-ratio
+  kind: computation
+  passage: At that common observed state the remaining work averaged 72.5 swaps for bubble, 795.7 for
+    insertion, 117.0 for selection and 82.6 for the bubble-selection mixture, a ratio of 11.0 between
+    the largest and smallest means (Figure 1b–c).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /sorting/closure/ratio_max_min_mean
+    reported: '11.0'
+    units: ratio
+    conditions: cell-level sorting, 100 cells, values 0-99 shuffled, random sequential updates, 100 runs
+      per condition
+    decimals: 1
+- id: sp-red
+  kind: computation
+  passage: On its own model the closed loop is stable, with all poles at real part $-4.32$ or below.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /spillover/reduced_max_re
+    reported: '-4.32'
+    units: largest real part of closed-loop poles
+    conditions: pinned beam, modes (k pi)^2, k=1..5; LQR plus observer designed on modes 1-2; actuator
+      0.21, sensor 0.83, designed loop
+    decimals: 2
+- id: sp-crit
+  kind: computation
+  passage: In the computation the full loop is unstable for every residual damping ratio below 0.0093,
+    with the largest pole real part 0.82 at zero damping and 0.73 at 0.001, while the designed loop keeps
+    its poles at $-4.32$ (Figure 2a).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /spillover/critical_zeta_residual
+    reported: '0.0093'
+    units: damping ratio
+    conditions: pinned beam, modes (k pi)^2, k=1..5; LQR plus observer designed on modes 1-2; actuator
+      0.21, sensor 0.83
+    decimals: 4
+- id: sp-0
+  kind: computation
+  passage: In the computation the full loop is unstable for every residual damping ratio below 0.0093,
+    with the largest pole real part 0.82 at zero damping and 0.73 at 0.001, while the designed loop keeps
+    its poles at $-4.32$ (Figure 2a).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /spillover/full_max_re_at_zero_damping
+    reported: '0.82'
+    units: real part
+    conditions: pinned beam, modes (k pi)^2, k=1..5; LQR plus observer designed on modes 1-2; actuator
+      0.21, sensor 0.83, residual damping 0
+    decimals: 2
+- id: sp-001
+  kind: computation
+  passage: In the computation the full loop is unstable for every residual damping ratio below 0.0093,
+    with the largest pole real part 0.82 at zero damping and 0.73 at 0.001, while the designed loop keeps
+    its poles at $-4.32$ (Figure 2a).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /spillover/full_max_re_at_0p001
+    reported: '0.73'
+    units: real part
+    conditions: pinned beam, modes (k pi)^2, k=1..5; LQR plus observer designed on modes 1-2; actuator
+      0.21, sensor 0.83, residual damping 0.001
+    decimals: 2
+- id: sp-red2
+  kind: computation
+  passage: In the computation the full loop is unstable for every residual damping ratio below 0.0093,
+    with the largest pole real part 0.82 at zero damping and 0.73 at 0.001, while the designed loop keeps
+    its poles at $-4.32$ (Figure 2a).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /spillover/reduced_max_re
+    reported: '-4.32'
+    units: real part
+    conditions: pinned beam, modes (k pi)^2, k=1..5; LQR plus observer designed on modes 1-2; actuator
+      0.21, sensor 0.83, designed loop
+    decimals: 2
+- id: sp-freq
+  kind: computation
+  passage: The destabilized pole belongs to the third mode, the first unmodelled one, and oscillates at
+    85.3 against its natural frequency of 88.8.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /spillover/unstable_frequency_at_0p001
+    reported: '85.3'
+    units: rad per time
+    conditions: pinned beam, modes (k pi)^2, k=1..5; LQR plus observer designed on modes 1-2; actuator
+      0.21, sensor 0.83, residual damping 0.001
+    decimals: 1
+- id: sp-nat
+  kind: computation
+  passage: The destabilized pole belongs to the third mode, the first unmodelled one, and oscillates at
+    85.3 against its natural frequency of 88.8.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /spillover/mode_frequencies/2
+    reported: '88.8'
+    units: rad per time
+    conditions: third mode of the pinned beam, (3 pi)^2
+    decimals: 1
+- id: sp-min
+  kind: computation
+  passage: From a small displacement of the first mode, the modelled modes decay to an amplitude of 1.8e-5
+    within three time units, as the design promises, while the residual modes, excited through the actuator,
+    overtake them after 0.65 time units and then grow without bound, dragging the modelled modes with
+    them (Figure 2b).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /spillover/min_controlled_amplitude_first_3
+    reported: '1.8e-5'
+    units: modal amplitude
+    conditions: pinned beam, modes (k pi)^2, k=1..5; LQR plus observer designed on modes 1-2; actuator
+      0.21, sensor 0.83, residual damping 0.001, initial displacement 0.01 of mode 1, t <= 3
+    significant_digits: 2
+- id: sp-cross
+  kind: computation
+  passage: From a small displacement of the first mode, the modelled modes decay to an amplitude of 1.8e-5
+    within three time units, as the design promises, while the residual modes, excited through the actuator,
+    overtake them after 0.65 time units and then grow without bound, dragging the modelled modes with
+    them (Figure 2b).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /spillover/residual_overtakes_controlled_at
+    reported: '0.65'
+    units: time
+    conditions: pinned beam, modes (k pi)^2, k=1..5; LQR plus observer designed on modes 1-2; actuator
+      0.21, sensor 0.83, residual damping 0.001
+    decimals: 2
+- id: sp-crit2
+  kind: computation
+  passage: The unmodelled damping that prevents this, above 0.0093, is a property of the material that
+    no part of the design accounts for.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /spillover/critical_zeta_residual
+    reported: '0.0093'
+    units: damping ratio
+    conditions: pinned beam, modes (k pi)^2, k=1..5; LQR plus observer designed on modes 1-2; actuator
+      0.21, sensor 0.83
+    decimals: 4
+- id: sl-s
+  kind: computation
+  passage: With $N = 10$, $K = 20$, $\rho = 1$, $\delta = 0.05$, $\nu = 0.005$ and $\tau = 800$, the long-run
+    output is largest at $s^* = 0.323$, where it is 5.44 against an observed throughput of 6.77 and the
+    repertoire covers 0.94 of disturbance types.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/s_star
+    reported: '0.323'
+    units: share of time
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800
+    decimals: 3
+- id: sl-Y
+  kind: computation
+  passage: With $N = 10$, $K = 20$, $\rho = 1$, $\delta = 0.05$, $\nu = 0.005$ and $\tau = 800$, the long-run
+    output is largest at $s^* = 0.323$, where it is 5.44 against an observed throughput of 6.77 and the
+    repertoire covers 0.94 of disturbance types.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/Y_star
+    reported: '5.44'
+    units: output per unit time
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800, s = s*
+    decimals: 2
+- id: sl-obs
+  kind: computation
+  passage: With $N = 10$, $K = 20$, $\rho = 1$, $\delta = 0.05$, $\nu = 0.005$ and $\tau = 800$, the long-run
+    output is largest at $s^* = 0.323$, where it is 5.44 against an observed throughput of 6.77 and the
+    repertoire covers 0.94 of disturbance types.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/observed_at_star
+    reported: '6.77'
+    units: output per unit time
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800, s = s*
+    decimals: 2
+- id: sl-cov
+  kind: computation
+  passage: With $N = 10$, $K = 20$, $\rho = 1$, $\delta = 0.05$, $\nu = 0.005$ and $\tau = 800$, the long-run
+    output is largest at $s^* = 0.323$, where it is 5.44 against an observed throughput of 6.77 and the
+    repertoire covers 0.94 of disturbance types.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/cover_star
+    reported: '0.94'
+    units: share of types
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800, s = s*
+    decimals: 2
+- id: sl-Y0
+  kind: computation
+  passage: At $s = 0$ observed throughput is largest and long-run output is 2.00, a factor of 2.72 lower,
+    because 80% of the time is spent stopped.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/Y_zero
+    reported: '2.00'
+    units: output per unit time
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800, s = 0
+    decimals: 2
+- id: sl-ratio
+  kind: computation
+  passage: At $s = 0$ observed throughput is largest and long-run output is 2.00, a factor of 2.72 lower,
+    because 80% of the time is spent stopped.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/ratio
+    reported: '2.72'
+    units: ratio
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800
+    decimals: 2
+- id: sl-down
+  kind: computation
+  passage: At $s = 0$ observed throughput is largest and long-run output is 2.00, a factor of 2.72 lower,
+    because 80% of the time is spent stopped.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/downtime_fraction_zero
+    reported: 80%
+    units: percent of time
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800, s = 0
+    decimals: 0
+    scale: 100
+- id: sl-sim
+  kind: computation
+  passage: Simulations of the full stochastic model at four fixed policies reproduce $Y(s)$ to within
+    0.81% (Figure 3a).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/max_rel_err_fixed
+    reported: 0.81%
+    units: percent relative error
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800, event-level simulation
+      of 2e7 time units at s in {0, 0.1, s*, 0.6}
+    decimals: 2
+    scale: 100
+- id: gz-zero
+  kind: computation
+  passage: Starting from $s^*$, the ascent reaches $s = 0$ after 3120 time units and stays there (Figure
+    3b).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/gaze/time_to_zero
+    reported: '3120'
+    units: time
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800; finite-difference
+      ascent, windows of 10, probe 0.02, step 0.01, pairs with a stoppage set aside, run of 2e6
+    decimals: 0
+- id: gz-skip
+  kind: computation
+  passage: Over a run of 2,000,000 time units it sets aside 79,683 pairs of windows as disruption and
+    uses 20,317, because the organisation is stopped most of the time.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/gaze/pairs_skipped
+    reported: 79,683
+    units: pairs of windows
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800; finite-difference
+      ascent, windows of 10, probe 0.02, step 0.01, pairs with a stoppage set aside, run of 2e6
+    decimals: 0
+- id: gz-used
+  kind: computation
+  passage: Over a run of 2,000,000 time units it sets aside 79,683 pairs of windows as disruption and
+    uses 20,317, because the organisation is stopped most of the time.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/gaze/pairs_used
+    reported: 20,317
+    units: pairs of windows
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800; finite-difference
+      ascent, windows of 10, probe 0.02, step 0.01, pairs with a stoppage set aside, run of 2e6
+    decimals: 0
+- id: gz-rate
+  kind: computation
+  passage: Over the second half of the run its output is 2.18, which is 0.40 of the optimum and 1.017
+    times $Y$ at its average effective share of 0.01, the residue of its own probing.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/gaze/late_rate
+    reported: '2.18'
+    units: output per unit time
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800; finite-difference
+      ascent, windows of 10, probe 0.02, step 0.01, pairs with a stoppage set aside, run of 2e6, second
+      half
+    decimals: 2
+- id: gz-star
+  kind: computation
+  passage: Over the second half of the run its output is 2.18, which is 0.40 of the optimum and 1.017
+    times $Y$ at its average effective share of 0.01, the residue of its own probing.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/gaze/late_over_star
+    reported: '0.40'
+    units: ratio
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800; finite-difference
+      ascent, windows of 10, probe 0.02, step 0.01, pairs with a stoppage set aside, run of 2e6, second
+      half
+    decimals: 2
+- id: gz-Ym
+  kind: computation
+  passage: Over the second half of the run its output is 2.18, which is 0.40 of the optimum and 1.017
+    times $Y$ at its average effective share of 0.01, the residue of its own probing.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/gaze/late_over_Y_mean_s
+    reported: '1.017'
+    units: ratio
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800; finite-difference
+      ascent, windows of 10, probe 0.02, step 0.01, pairs with a stoppage set aside, run of 2e6, second
+      half, against Y at the mean effective share
+    decimals: 3
+- id: gz-ms
+  kind: computation
+  passage: Over the second half of the run its output is 2.18, which is 0.40 of the optimum and 1.017
+    times $Y$ at its average effective share of 0.01, the residue of its own probing.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /slack/gaze/late_mean_s
+    reported: '0.01'
+    units: share of time
+    conditions: organisation model N=10, K=20, rho=1, delta=0.05, nu=0.005, tau=800; finite-difference
+      ascent, windows of 10, probe 0.02, step 0.01, pairs with a stoppage set aside, run of 2e6, second
+      half
+    decimals: 2
+- id: loop-3
+  kind: computation
+  passage: An observer that intervenes at 3 times the rate at which it learns removes 0.75 of the disagreement
+    by changing the world, and one with $\kappa = 9\eta$ removes 0.9.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /loop/rows/2/share_by_system
+    reported: '0.75'
+    units: share
+    conditions: eta=1, kappa=3, theta0=0, x0=1
+    decimals: 2
+- id: loop-9
+  kind: computation
+  passage: An observer that intervenes at 3 times the rate at which it learns removes 0.75 of the disagreement
+    by changing the world, and one with $\kappa = 9\eta$ removes 0.9.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /loop/rows/3/share_by_system
+    reported: '0.9'
+    units: share
+    conditions: eta=1, kappa=9
+    decimals: 1
+- id: rep-checks
+  kind: computation
+  passage: 'The simulation in `simulation/` regenerates every number and figure: `uv run run_all.py` writes
+    `output/results.json` and the three figures and evaluates 18 internal checks (closed forms against
+    simulation, reproduction against published values, stability claims against eigenvalues).'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /n_checks
+    reported: '18'
+    units: count
+    conditions: all checks in results.json
+    decimals: 0
+- id: src-zgl
+  kind: source
+  passage: Zhang, Goldstein and Levin implemented bubble, insertion and selection sort as policies executed
+    by each element of an array, with no central controller, and then measured more than sortedness [@zhang2025].
+  evidence:
+    citation_id: zhang2025
+    locator: Abstract
+    verified: true
+    verification_note: 'Abstract (Adaptive Behavior): bottom-up cell-level versions of classical sorting
+      algorithms; damaged elements; ability to temporarily reduce progress to navigate around a defect;
+      clustering in chimeric arrays.'
+- id: src-zgl-quote
+  kind: source
+  passage: The authors present the arrays as a minimal case of capacities that "may lie in systems that
+    we think we fully understand because we designed them" [@zhang2024, Introduction].
+  evidence:
+    citation_id: zhang2024
+    locator: Introduction
+    verified: true
+    verification_note: 'arXiv:2401.05375 v1 text, Introduction: "to explore the idea that novel capabilities
+      may lie in systems that we think we fully understand because we designed them".'
+- id: src-zgl-mech
+  kind: source
+  passage: 'The clustering is a regularity of the dynamics that the sorting specification neither requires
+    nor forbids, and the original authors offer a mechanism for it: an algorithm that moves its elements
+    into place faster than its partner leaves partially sorted runs of its own type behind, which the
+    slower algorithm later breaks up [@zhang2024, Results].'
+  evidence:
+    citation_id: zhang2024
+    locator: Results, mixed Algotype sorting
+    verified: true
+    verification_note: 'arXiv text: efficiency hypothesis (more efficient Algotype reaches positions first;
+      less efficient ones catch up and split clusters); duplicate-value experiments "suggest that the
+      efficiency hypothesis can be the explanation for the segregation".'
+- id: src-kalman
+  kind: source
+  passage: In linear systems theory, Kalman showed that the input-output relations of a system determine
+    only its completely controllable and completely observable part [@kalman1963].
+  evidence:
+    citation_id: kalman1963
+    locator: Abstract
+    verified: true
+    verification_note: 'Abstract: "the input/output relations determine only one part of a system, that
+      which is completely observable and completely controllable."'
+- id: src-balas
+  kind: source
+  passage: This is the instability that Balas identified for flexible structures, where the combined effect
+    of control and observation spillover can destabilize a loop designed on a finite number of modes [@balas1978].
+  evidence:
+    citation_id: balas1978
+    locator: Abstract
+    verified: true
+    verification_note: 'Abstract: the combined effect of control and observation spillover from residual
+      modes can lead to instabilities in the closed loop of a controller designed for finitely many modes.'
+- id: src-conant
+  kind: source
+  passage: Conant and Ashby proved that a regulator that is maximally successful and maximally simple
+    must be isomorphic to the system it regulates [@conant1970]; the computation shows the converse hazard,
+    a regulator isomorphic to a quotient of its system, which regulates the quotient.
+  evidence:
+    citation_id: conant1970
+    locator: Abstract
+    verified: true
+    verification_note: 'Abstract: any regulator that is maximally both successful and simple must be isomorphic
+      with the system being regulated.'
+- id: src-wimsatt
+  kind: source
+  passage: 'Wimsatt''s analysis of aggregativity makes the same point about decompositions: the conditions
+    under which a whole behaves as a sum of its parts are met differently for different decompositions
+    of the same system, and to different degrees, which turns the choice of decomposition into an empirical
+    question [@wimsatt1997; @wimsatt2007].'
+  evidence:
+    citation_id: wimsatt1997
+    locator: Abstract
+    verified: true
+    verification_note: 'Abstract: aggregativity conditions are met differently for different decompositions
+      of the system and in different degrees, providing criteria for choosing decompositions.'
+- id: src-bongard
+  kind: source
+  passage: Bongard and Levin describe this situation for organisms, which "perform multiple functions
+    in the same place at the same time" and are best treated with an observer-dependent, pragmatic view
+    of what they compute [@bongard2023].
+  evidence:
+    citation_id: bongard2023
+    locator: Abstract
+    verified: true
+    verification_note: 'Abstract: "living systems perform multiple functions in the same place at the
+      same time"; argues for an observer-dependent, pragmatic view.'
+- id: src-espeland
+  kind: source
+  passage: Espeland and Stevens analyse commensuration, the comparison of different entities under a common
+    metric, as a mode of power [@espeland1998].
+  evidence:
+    citation_id: espeland1998
+    locator: Abstract
+    verified: true
+    verification_note: 'Abstract: commensuration defined as comparison of different entities according
+      to a common metric, analysed as a mode of power.'
+- id: src-taylor7
+  kind: source
+  passage: 'Taylor stated the program in his own terms: "In the past the man has been first; in the future
+    the system must be first" [@taylor1911, 7], and management takes on "the burden of gathering together
+    all of the traditional knowledge which in the past has been possessed by the workmen and then of classifying,
+    tabulating, and reducing this knowledge to rules, laws, and formulae" [@taylor1911, 36].'
+  evidence:
+    citation_id: taylor1911
+    locator: p. 7
+    verified: true
+    verification_note: Read in the 1919 Harper & Brothers printing (copyright 1911) scanned at archive.org
+      (cu31924085713331), Introduction, p. 7.
+- id: src-taylor36
+  kind: source
+  passage: 'Taylor stated the program in his own terms: "In the past the man has been first; in the future
+    the system must be first" [@taylor1911, 7], and management takes on "the burden of gathering together
+    all of the traditional knowledge which in the past has been possessed by the workmen and then of classifying,
+    tabulating, and reducing this knowledge to rules, laws, and formulae" [@taylor1911, 36].'
+  evidence:
+    citation_id: taylor1911
+    locator: p. 36
+    verified: true
+    verification_note: 'Read in the same scan, p. 36: managers assume "the burden of gathering together
+      all of the traditional knowledge which in the past has been possessed by the workmen and then of
+      classifying, tabulating, and reducing this knowledge to rules, laws, and formulae".'
+- id: src-marx
+  kind: source
+  passage: 'Marx had described the outcome half a century earlier: "In handicrafts and manufacture, the
+    workman makes use of a tool, in the factory, the machine makes use of him", and the worker becomes
+    the "mere living appendage" of a mechanism independent of him [@marx1887, ch.'
+  evidence:
+    citation_id: marx1887
+    locator: ch. XV, sec. 4
+    verified: true
+    verification_note: Read in the Moore-Aveling translation (1887 text) scanned at archive.org (in.ernet.dli.2015.124419),
+      chapter XV "Machinery and Modern Industry", section 4 (The Factory); the same paragraph has "mere
+      living appendage".
+- id: src-ashby
+  kind: source
+  passage: 'Ashby''s law of requisite variety states the cost in general form: in his words, "only variety
+    can destroy variety" [@ashby1956, S.11/7], and the repertoire is the variety with which the organisation
+    regulates its disturbances.'
+  evidence:
+    citation_id: ashby1956
+    locator: S.11/7
+    verified: true
+    verification_note: 'Read in the scan at archive.org (introductiontocy00ashb), section 11/7: "only
+      variety in R can force down the variety due to D; only variety can destroy variety."'
+- id: src-white75
+  kind: source
+  passage: Abstractions such as simply located bits of matter are legitimate products of thought, and
+    the mistake lies in taking them for concrete fact, "the accidental error of mistaking the abstract
+    for the concrete", which he called the fallacy of misplaced concreteness [@whitehead1925, 74–75].
+  evidence:
+    citation_id: whitehead1925
+    locator: pp. 74-75
+    verified: true
+    verification_note: 'Read in the Macmillan 1925 edition (1935 reprint) scanned at archive.org (sciencemodernwor0000alfr_c3e9),
+      pp. 74-75: "it is merely the accidental error of mistaking the abstract for the concrete. It is
+      an example of what I will call the Fallacy of Misplaced Concreteness."'
+- id: src-white85
+  kind: source
+  passage: 'He added the cost of a well-founded abstraction: "by the nature of the case, you have abstracted
+    from the remainder of things" [@whitehead1925, 85].'
+  evidence:
+    citation_id: whitehead1925
+    locator: p. 85
+    verified: true
+    verification_note: 'Read in the same scan, p. 85: "The disadvantage of exclusive attention to a group
+      of abstractions, however well-founded, is that, by the nature of the case, you have abstracted from
+      the remainder of things."'
+- id: src-arora
+  kind: source
+  passage: The phrase "machinic gaze" has been used for the way machine-learning models reconfigure the
+    representation of built heritage [@arora2024]; here the term refers to the epistemic and engineering
+    operation defined above.
+  evidence:
+    citation_id: arora2024
+    locator: Abstract
+    verified: true
+    verification_note: 'Abstract: introduces "machinic gaze" to conceptualise the reconfiguration of heritage
+      representation via AI models.'
+- id: def-machine
+  kind: definition
+  passage: The pair $(Z, G)$ is then the machine that the system realizes under $\pi$ on $R$, and the
+    fibres $\pi^{-1}(z)$ are the distinctions the machine does not draw.
+  rationale: 'Central definition: a machine is the quotient under which the dynamics close on a regime;
+    equivalent to lumpability for stochastic systems.'
+- id: def-gaze
+  kind: definition
+  passage: The machine gaze is the use of $(Z,G)$ in place of $(X,F)$ outside the regime on which closure
+    holds, or the treatment of the fibres as if they were empty.
+  rationale: Definitions of the machine gaze and machinization, stated in terms of the closure condition.
+- id: def-defect
+  kind: definition
+  passage: A convenient measure of the defect, for a future observed quantity $Y$, is the conditional
+    mutual information $I(Y; X \mid \pi(X))$, which vanishes exactly when the distribution of $Y$ depends
+    on $x$ only through $\pi(x)$.
+  rationale: Closure defect as conditional mutual information; zero iff the future observed quantity depends
+    on the state only through the observation.
+- id: asm-sort
+  kind: assumption
+  passage: We reimplemented the cell-level algorithms of Zhang, Goldstein and Levin with random sequential
+    updates in place of their threads, following the rules in their code.
+  rationale: 'Modelling choice: random sequential updates replace the original threads; rules follow the
+    published code.'
+- id: asm-org
+  kind: assumption
+  passage: The parameters are illustrative; the qualitative result needs only that maintenance takes time
+    from throughput and that its benefit arrives through rare events.
+  rationale: The organisation model is illustrative; the qualitative result needs only that maintenance
+    costs throughput and pays off through rare events.
+- id: int-relative
+  kind: interpretation
+  passage: Machinehood is relative to an observation without being a matter of choice.
+  rationale: 'Consequence of Proposition 1: closure is a property of system, observation and regime that
+    can fail.'
+- id: int-sort
+  kind: interpretation
+  passage: Under the specification's observation the arrays are one machine; under the progress observation
+    they are not a machine at all; under the label observation they show a regularity that neither of
+    the other two contains.
+  rationale: 'Reading of the reproduction: the input-output observation closes for all compositions, the
+    sortedness observable does not, and the label observation shows aggregation.'
+- id: int-spill
+  kind: interpretation
+  passage: The design succeeds on the quotient during the period in which it would be judged, and fails
+    on the system.
+  rationale: Reading of the time response at residual damping 0.001 (bound values sp-min and sp-cross).
+- id: int-machinization
+  kind: interpretation
+  passage: 'The policy the gaze converges to is the one under which the organisation is exactly a machine
+    under its observation: with no maintenance the repertoire is empty, it carries no information about
+    the future, and the observed throughput together with the record of disturbances predicts everything
+    that happens (Proposition 3, Figure 3c).'
+  rationale: Follows from Proposition 3(ii) at s = 0 together with the ascent reaching s = 0.
+- id: int-loop
+  kind: interpretation
+  passage: Prediction succeeds in every case, which is why the accuracy of a model of a governed system
+    says little by itself about whether the model was right about the system before it was governed.
+  rationale: 'Consequence of Proposition 4: both variables converge to a common value whatever the rates.'
+- id: int-hist
+  kind: interpretation
+  passage: Each of these accounts describes an intervention on a human system that makes it close under
+    the variables of the organisation that governs it.
+  rationale: Interpretive reading of Taylor, Marx, Braverman, Foucault and Mumford in terms of the closure
+    definition; adds nothing to their historical claims.
+- id: int-heid
+  kind: interpretation
+  passage: In the present vocabulary, standing-reserve is what a system becomes when the observation retains
+    only what can be ordered.
+  rationale: Interpretive mapping of Heidegger's standing-reserve and Deleuze's control societies onto
+    the observation and intervention loop.
+- id: norm-diag
+  kind: normative
+  passage: The framework yields checks that apply wherever a machine description is in use.
+  rationale: 'Methodological recommendation derived from the computations: test closure, perturb outside
+    the design regime, audit fibre losses, inspect set-aside data.'
+runs:
+- id: model
+  required: true
+  record: verification/model.json

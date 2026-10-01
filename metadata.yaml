@@ -1,13 +1,35 @@
 slug: the-machine-gaze
 web_slug: the-machine-gaze
-title: "the-machine-gaze"
-header: "the-machine-gaze"
-created: "2026-09"        # inception month (drives YYYY/MM archive path)
-date: null                    # publication month, e.g. "May 2026" (shown on web)
+title: 'The Machine Gaze: Machinehood as Closure Under an Observation'
+header: The Machine Gaze
+created: 2026-09
+date: September 2026
 paper_dir: paper
-has_simulation: false
-claims_target: none           # results.json | claim-ledger | none
+has_simulation: true
+claims_target: claim-ledger
 repo: git@github.com:piatra-institute/papers-the-machine-gaze.git
 github: https://github.com/piatra-institute/papers-the-machine-gaze
-status: draft                 # draft | built | published
-abstract: null
+status: published
+abstract: 'Whether something is a machine is usually treated as a fact about its parts. We treat it as
+  a fact about a system together with an observation: a system is a machine under an observation when
+  its dynamics close on the observed variables, so that the next observed state is fixed by the current
+  one and the inputs. The condition is exact lumpability and the commutation of Rosen''s modeling relation;
+  it makes machinehood relative to the observation without making it arbitrary, and it names what a machine
+  description leaves out. Three computations show what that remainder can contain. Self-sorting arrays
+  with cell-level algorithms, reproduced after Zhang, Goldstein and Levin, all compute the same function,
+  yet arrays that mix two algorithms cluster by algorithm while they sort, reaching aggregation of 0.59
+  to 0.65 where label-matched controls stay at 0.49, and at the same observed sortedness the remaining
+  work differs 11-fold between algorithms. A controller designed on two modes of a beam is stable on its
+  own model and destabilizes the beam unless the unmodelled modes have a damping ratio above 0.0093. In
+  an organisation whose throughput is observed and whose repertoire for absorbing disturbances is not,
+  ascent on observed throughput removes all maintenance and cuts long-run output to 40% of the optimum,
+  at the policy under which the system closes exactly under its observation. We call the use of a closed
+  quotient as if it were the system the machine gaze, and interventions that make a system close under
+  the gaze''s observation machinization.'
+build_resources:
+- simulation/output/figures/sorting.png
+- simulation/output/figures/spillover.png
+- simulation/output/figures/slack.png
+web_blurb: A system is a machine under an observation when its dynamics close on the observed variables.
+  The states the observation leaves out keep their own dynamics, controllers designed on the quotient
+  act on them, and making a system fit its description can empty them.

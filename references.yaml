@@ -1,3 +1,640 @@
 # CSL references with stable IDs; cite using Pandoc [@id] syntax.
-# Record identities and supporting passages in sources.md and claims.yaml.
-references: []
+# Entries with a DOI were resolved through doi.org content negotiation (CSL-JSON) on 2026-10-01;
+# books without a DOI were entered by hand and checked against Open Library or the publisher. See sources.md.
+references:
+- id: antoulas2005
+  type: book
+  title: Approximation of Large-Scale Dynamical Systems
+  author:
+  - given: Athanasios C.
+    family: Antoulas
+  publisher: Society for Industrial and Applied Mathematics
+  DOI: 10.1137/1.9780898718713
+  issued:
+    date-parts:
+    - - 2005
+  publisher-place: Philadelphia
+- id: arora2024
+  type: article-journal
+  title: (Re)framing built heritage through the machinic gaze
+  author:
+  - given: Vanicka
+    family: Arora
+  - given: Liam
+    family: Magee
+  - given: Luke
+    family: Munn
+  container-title: Journal of Social Archaeology
+  volume: '24'
+  issue: '2'
+  page: 197-217
+  DOI: 10.1177/14696053241237949
+  issued:
+    date-parts:
+    - - 2024
+- id: ashby1956
+  type: book
+  title: An Introduction to Cybernetics
+  author:
+  - family: Ashby
+    given: W. Ross
+  publisher: Chapman & Hall
+  publisher-place: London
+  issued:
+    date-parts:
+    - - 1956
+- id: balas1978
+  type: article-journal
+  title: Feedback control of flexible systems
+  author:
+  - given: M.
+    family: Balas
+  container-title: IEEE Transactions on Automatic Control
+  volume: '23'
+  issue: '4'
+  page: 673-679
+  DOI: 10.1109/tac.1978.1101798
+  issued:
+    date-parts:
+    - - 1978
+- id: beer1984
+  type: article-journal
+  title: 'The Viable System Model: Its Provenance, Development, Methodology and Pathology'
+  author:
+  - given: Stafford
+    family: Beer
+  container-title: Journal of the Operational Research Society
+  volume: '35'
+  issue: '1'
+  page: 7-25
+  DOI: 10.1057/jors.1984.2
+  issued:
+    date-parts:
+    - - 1984
+- id: bongard2021
+  type: article-journal
+  title: 'Living Things Are Not (20th Century) Machines: Updating Mechanism Metaphors in Light of the
+    Modern Science of Machine Behavior'
+  author:
+  - given: Joshua
+    family: Bongard
+  - given: Michael
+    family: Levin
+  container-title: Frontiers in Ecology and Evolution
+  volume: '9'
+  DOI: 10.3389/fevo.2021.650726
+  issued:
+    date-parts:
+    - - 2021
+- id: bongard2023
+  type: article-journal
+  title: 'There’s Plenty of Room Right Here: Biological Systems as Evolved, Overloaded, Multi-Scale Machines'
+  author:
+  - given: Joshua
+    family: Bongard
+  - given: Michael
+    family: Levin
+  container-title: Biomimetics
+  volume: '8'
+  issue: '1'
+  page: '110'
+  DOI: 10.3390/biomimetics8010110
+  issued:
+    date-parts:
+    - - 2023
+- id: bowker1999
+  type: book
+  title: 'Sorting Things Out: Classification and Its Consequences'
+  author:
+  - given: Geoffrey C.
+    family: Bowker
+  - given: Susan Leigh
+    family: Star
+  publisher: The MIT Press
+  DOI: 10.7551/mitpress/6352.001.0001
+  issued:
+    date-parts:
+    - - 1999
+  publisher-place: Cambridge, MA
+- id: braverman1974
+  type: book
+  title: 'Labor and Monopoly Capital: The Degradation of Work in the Twentieth Century'
+  author:
+  - family: Braverman
+    given: Harry
+  publisher: Monthly Review Press
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 1974
+- id: campbell1979
+  type: article-journal
+  title: Assessing the impact of planned social change
+  author:
+  - given: Donald T.
+    family: Campbell
+  container-title: Evaluation and Program Planning
+  volume: '2'
+  issue: '1'
+  page: 67-90
+  DOI: 10.1016/0149-7189(79)90048-x
+  issued:
+    date-parts:
+    - - 1979
+- id: canguilhem1978
+  type: book
+  title: On the Normal and the Pathological
+  author:
+  - given: Georges
+    family: Canguilhem
+  publisher: Springer Netherlands
+  DOI: 10.1007/978-94-009-9853-7
+  issued:
+    date-parts:
+    - - 1978
+  translator:
+  - family: Fawcett
+    given: Carolyn R.
+  publisher-place: Dordrecht
+- id: canguilhem2008
+  type: book
+  title: Knowledge of Life
+  author:
+  - family: Canguilhem
+    given: Georges
+  editor:
+  - family: Marrati
+    given: Paola
+  - family: Meyers
+    given: Todd
+  translator:
+  - family: Geroulanos
+    given: Stefanos
+  - family: Ginsburg
+    given: Daniela
+  publisher: Fordham University Press
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 2008
+- id: conant1970
+  type: article-journal
+  title: Every good regulator of a system must be a model of that system
+  author:
+  - family: Conant
+    given: Roger C.
+  - family: Ashby
+    given: W. Ross
+  container-title: International Journal of Systems Science
+  volume: '1'
+  issue: '2'
+  page: 89-97
+  DOI: 10.1080/00207727008920220
+  issued:
+    date-parts:
+    - - 1970
+- id: deleuze1995
+  type: chapter
+  title: Postscript on Control Societies
+  container-title: Negotiations, 1972–1990
+  author:
+  - family: Deleuze
+    given: Gilles
+  translator:
+  - family: Joughin
+    given: Martin
+  publisher: Columbia University Press
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 1995
+- id: dennett1991
+  type: article-journal
+  title: Real Patterns
+  author:
+  - given: Daniel C.
+    family: Dennett
+  container-title: The Journal of Philosophy
+  volume: '88'
+  issue: '1'
+  page: 27-51
+  DOI: 10.2307/2027085
+  issued:
+    date-parts:
+    - - 1991
+- id: espeland1998
+  type: article-journal
+  title: Commensuration as a Social Process
+  author:
+  - given: Wendy Nelson
+    family: Espeland
+  - given: Mitchell L.
+    family: Stevens
+  container-title: Annual Review of Sociology
+  volume: '24'
+  issue: '1'
+  page: 313-343
+  DOI: 10.1146/annurev.soc.24.1.313
+  issued:
+    date-parts:
+    - - 1998
+- id: foucault1977
+  type: book
+  title: 'Discipline and Punish: The Birth of the Prison'
+  author:
+  - family: Foucault
+    given: Michel
+  translator:
+  - family: Sheridan
+    given: Alan
+  publisher: Pantheon Books
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 1977
+- id: hacking1995
+  type: chapter
+  title: The looping effects of human kinds
+  author:
+  - given: Ian
+    family: Hacking
+  container-title: 'Causal Cognition: A Multidisciplinary Debate'
+  page: 351-383
+  publisher: Oxford University Press
+  DOI: 10.1093/acprof:oso/9780198524021.003.0012
+  issued:
+    date-parts:
+    - - 1995
+  editor:
+  - family: Sperber
+    given: Dan
+  - family: Premack
+    given: David
+  - family: Premack
+    given: Ann James
+  publisher-place: Oxford
+- id: heidegger1977
+  type: book
+  title: The Question Concerning Technology, and Other Essays
+  author:
+  - family: Heidegger
+    given: Martin
+  translator:
+  - family: Lovitt
+    given: William
+  publisher: Harper & Row
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 1977
+- id: holmstrom1991
+  type: article-journal
+  title: 'Multitask Principal–Agent Analyses: Incentive Contracts, Asset Ownership, and Job Design'
+  author:
+  - given: Bengt
+    family: Holmstrom
+  - given: Paul
+    family: Milgrom
+  container-title: The Journal of Law, Economics, and Organization
+  volume: '7'
+  issue: special issue
+  page: 24-52
+  DOI: 10.1093/jleo/7.special_issue.24
+  issued:
+    date-parts:
+    - - 1991
+- id: kalman1963
+  type: article-journal
+  title: Mathematical Description of Linear Dynamical Systems
+  author:
+  - given: R. E.
+    family: Kalman
+  container-title: Journal of the Society for Industrial and Applied Mathematics Series A Control
+  volume: '1'
+  issue: '2'
+  page: 152-192
+  DOI: 10.1137/0301010
+  issued:
+    date-parts:
+    - - 1963
+- id: kemeny1960
+  type: book
+  title: Finite Markov Chains
+  author:
+  - family: Kemeny
+    given: John G.
+  - family: Snell
+    given: J. Laurie
+  publisher: Van Nostrand
+  publisher-place: Princeton, NJ
+  issued:
+    date-parts:
+    - - 1960
+- id: larsen1991
+  type: article-journal
+  title: Bisimulation through probabilistic testing
+  author:
+  - given: Kim G.
+    family: Larsen
+  - given: Arne
+    family: Skou
+  container-title: Information and Computation
+  volume: '94'
+  issue: '1'
+  page: 1-28
+  DOI: 10.1016/0890-5401(91)90030-6
+  issued:
+    date-parts:
+    - - 1991
+- id: mackenzie2006
+  type: book
+  title: 'An Engine, Not a Camera: How Financial Models Shape Markets'
+  author:
+  - given: Donald
+    family: MacKenzie
+  publisher: The MIT Press
+  DOI: 10.7551/mitpress/9780262134606.001.0001
+  issued:
+    date-parts:
+    - - 2006
+  publisher-place: Cambridge, MA
+- id: marx1887
+  type: book
+  title: 'Capital: A Critical Analysis of Capitalist Production'
+  volume: '1'
+  author:
+  - family: Marx
+    given: Karl
+  translator:
+  - family: Moore
+    given: Samuel
+  - family: Aveling
+    given: Edward
+  editor:
+  - family: Engels
+    given: Frederick
+  publisher: Swan Sonnenschein, Lowrey & Co.
+  publisher-place: London
+  issued:
+    date-parts:
+    - - 1887
+- id: moore1956
+  type: chapter
+  title: Gedanken-Experiments on Sequential Machines
+  author:
+  - given: Edward F.
+    family: Moore
+  container-title: Automata Studies
+  page: 129-154
+  publisher: Princeton University Press
+  DOI: 10.1515/9781400882618-006
+  issued:
+    date-parts:
+    - - 1956
+  editor:
+  - family: Shannon
+    given: C. E.
+  - family: McCarthy
+    given: J.
+  collection-title: Annals of Mathematics Studies
+  collection-number: '34'
+  publisher-place: Princeton, NJ
+- id: moore1981
+  type: article-journal
+  title: 'Principal component analysis in linear systems: Controllability, observability, and model reduction'
+  author:
+  - given: B.
+    family: Moore
+  container-title: IEEE Transactions on Automatic Control
+  volume: '26'
+  issue: '1'
+  page: 17-32
+  DOI: 10.1109/tac.1981.1102568
+  issued:
+    date-parts:
+    - - 1981
+- id: mumford1967
+  type: book
+  title: 'The Myth of the Machine: Technics and Human Development'
+  author:
+  - family: Mumford
+    given: Lewis
+  publisher: Harcourt, Brace & World
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 1967
+- id: nicholson2014
+  type: article-journal
+  title: 'The machine conception of the organism in development and evolution: A critical analysis'
+  author:
+  - given: Daniel J.
+    family: Nicholson
+  container-title: 'Studies in History and Philosophy of Science Part C: Studies in History and Philosophy
+    of Biological and Biomedical Sciences'
+  volume: '48'
+  page: 162-174
+  DOI: 10.1016/j.shpsc.2014.08.003
+  issued:
+    date-parts:
+    - - 2014
+- id: nicholson2019
+  type: article-journal
+  title: Is the cell really a machine?
+  author:
+  - given: Daniel J.
+    family: Nicholson
+  container-title: Journal of Theoretical Biology
+  volume: '477'
+  page: 108-126
+  DOI: 10.1016/j.jtbi.2019.06.002
+  issued:
+    date-parts:
+    - - 2019
+- id: rosen1991
+  type: book
+  title: 'Life Itself: A Comprehensive Inquiry into the Nature, Origin, and Fabrication of Life'
+  author:
+  - family: Rosen
+    given: Robert
+  publisher: Columbia University Press
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 1991
+- id: rosen2012
+  type: book
+  title: 'Anticipatory Systems: Philosophical, Mathematical, and Methodological Foundations'
+  author:
+  - given: Robert
+    family: Rosen
+  publisher: Springer New York
+  DOI: 10.1007/978-1-4614-1269-4
+  issued:
+    date-parts:
+    - - 2012
+  collection-title: IFSR International Series in Systems Science and Systems Engineering
+  edition: '2'
+  publisher-place: New York
+- id: scott1998
+  type: book
+  title: 'Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed'
+  author:
+  - family: Scott
+    given: James C.
+  publisher: Yale University Press
+  publisher-place: New Haven, CT
+  issued:
+    date-parts:
+    - - 1998
+- id: simon2019
+  type: book
+  title: The Sciences of the Artificial
+  author:
+  - given: Herbert A.
+    family: Simon
+  publisher: The MIT Press
+  DOI: 10.7551/mitpress/12107.001.0001
+  issued:
+    date-parts:
+    - - 2019
+  edition: '3'
+  publisher-place: Cambridge, MA
+- id: simondon2017
+  type: book
+  title: On the Mode of Existence of Technical Objects
+  author:
+  - family: Simondon
+    given: Gilbert
+  translator:
+  - family: Malaspina
+    given: Cecile
+  - family: Rogove
+    given: John
+  publisher: Univocal
+  publisher-place: Minneapolis
+  issued:
+    date-parts:
+    - - 2017
+- id: strathern1997
+  type: article-journal
+  title: '‘Improving ratings’: Audit in the British University system'
+  author:
+  - given: Marilyn
+    family: Strathern
+  container-title: European Review
+  volume: '5'
+  issue: '3'
+  page: 305-321
+  DOI: 10.1002/(sici)1234-981x(199707)5:3<305::aid-euro184>3.0.co;2-4
+  issued:
+    date-parts:
+    - - 1997
+- id: taylor1911
+  type: book
+  title: The Principles of Scientific Management
+  author:
+  - family: Taylor
+    given: Frederick Winslow
+  publisher: Harper & Brothers
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 1911
+- id: whitehead1925
+  type: book
+  title: Science and the Modern World
+  author:
+  - family: Whitehead
+    given: Alfred North
+  publisher: Macmillan
+  publisher-place: New York
+  issued:
+    date-parts:
+    - - 1925
+- id: wimsatt1997
+  type: article-journal
+  title: 'Aggregativity: Reductive Heuristics for Finding Emergence'
+  author:
+  - given: William C.
+    family: Wimsatt
+  container-title: Philosophy of Science
+  volume: '64'
+  issue: S4
+  page: S372-S384
+  DOI: 10.1086/392615
+  issued:
+    date-parts:
+    - - 1997
+- id: wimsatt2007
+  type: book
+  title: 'Re-Engineering Philosophy for Limited Beings: Piecewise Approximations to Reality'
+  author:
+  - family: Wimsatt
+    given: William C.
+  publisher: Harvard University Press
+  DOI: 10.2307/j.ctv1pncnrh
+  issued:
+    date-parts:
+    - - 2007
+  publisher-place: Cambridge, MA
+- id: wimsatt2012
+  type: chapter
+  title: Robustness, Reliability, and Overdetermination (1981)
+  author:
+  - given: William C.
+    family: Wimsatt
+  container-title: 'Characterizing the Robustness of Science: After the Practice Turn in Philosophy of
+    Science'
+  page: 61-87
+  publisher: Springer Netherlands
+  DOI: 10.1007/978-94-007-2759-5_2
+  issued:
+    date-parts:
+    - - 2012
+  editor:
+  - family: Soler
+    given: Léna
+  - family: Trizio
+    given: Emiliano
+  - family: Nickles
+    given: Thomas
+  - family: Wimsatt
+    given: William C.
+  collection-title: Boston Studies in the Philosophy of Science
+  publisher-place: Dordrecht
+- id: zhang2024
+  type: article
+  title: 'Classical Sorting Algorithms as a Model of Morphogenesis: Self-Sorting Arrays Reveal Unexpected
+    Competencies in a Minimal Model of Basal Intelligence'
+  author:
+  - family: Zhang
+    given: Taining
+  - family: Goldstein
+    given: Adam
+  - family: Levin
+    given: Michael
+  DOI: 10.48550/ARXIV.2401.05375
+  issued:
+    date-parts:
+    - - 2024
+  number: arXiv:2401.05375
+- id: zhang2025
+  type: article-journal
+  title: 'Classical sorting algorithms as a model of morphogenesis: Self-sorting arrays reveal unexpected
+    competencies in a minimal model of basal intelligence'
+  author:
+  - given: Taining
+    family: Zhang
+  - given: Adam
+    family: Goldstein
+  - given: Michael
+    family: Levin
+  container-title: Adaptive Behavior
+  volume: '33'
+  issue: '1'
+  page: 25-54
+  DOI: 10.1177/10597123241269740
+  issued:
+    date-parts:
+    - - 2025

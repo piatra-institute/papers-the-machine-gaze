@@ -1,0 +1,10 @@
+{
+  "manuscript_sha256": "bce55790987b503b4abb1072bf28ca5c0606ee8b3f772092a4e9d4a964bb8d88",
+  "full_read": true,
+  "argument_review": true,
+  "structure_review": true,
+  "voice_review": true,
+  "source_review": true,
+  "final_read": true,
+  "notes": "Full read of the final manuscript; argument, structure, voice and sources reviewed against the origin material, the verified abstracts and the scanned primary texts; decisions recorded in editorial.md."
+}
